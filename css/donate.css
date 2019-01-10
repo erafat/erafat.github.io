@@ -73,15 +73,15 @@ a{
 	border-left: 1px solid #ddd;
 	background: no-repeat center center;
 	background-color: rgba(204, 217, 220,0.1);
-	background-size: 100px;
+	background-size: 45px;
 	transition: all .3s;
 	cursor: pointer;
 	overflow: hidden;
 	line-height: 600px;
 	height: 28px;
-	-webkit-filter: grayscale(99);
-	filter: grayscale(99);
-	opacity: 100;
+	-webkit-filter: grayscale(1);
+	filter: grayscale(1);
+	opacity: 1;
 }
 
 }
@@ -115,7 +115,7 @@ a{
 	z-index: 1;
 	background-color: rgba(255,255,255,0.3);
 	display: none;
-    perspective: 400px;
+    perspective: 900px;
 }
 #MainBox {
 	cursor: pointer;

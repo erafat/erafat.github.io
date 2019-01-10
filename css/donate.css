@@ -161,7 +161,7 @@ a{
 	overflow: hidden;
 }
 [data-footnote]:hover {
-	overflow: visible;
+	overflow: hidden;
 }
 
 /*[data-footnote]::before, [data-footnote]::after {

@@ -86,7 +86,7 @@ a{
 
 }
 #donateBox>li:first-child {
-	border-width: 0;
+	border-width: 1;
 }
 #donateBox a {
 	display: block;

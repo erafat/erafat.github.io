@@ -58,7 +58,7 @@ a{
 	left: calc(50% - 150px);
 	top: calc(50% - 15px);
 	background-color: #fff;
-	border: 30px solid #ddd;
+	border: 3px solid #ddd;
 	border-radius: 1px;
 	width: 299px;
 	height: 28px;

@@ -32,11 +32,11 @@ a{
 	height: 100%;
 }
 .blur {
-	-webkit-filter: blur(1000px);
-	filter: blur(1000px);
+	-webkit-filter: blur(3px);
+	filter: blur(3px);
 }
 .tr3 {
-	transition: all .1s;
+	transition: all .3s;
 }
 #DonateText {
 	position: fixed;
@@ -116,7 +116,7 @@ a{
 	z-index: 1;
 	background-color: rgba(255,255,255,0.3);
 	display: none;
-    perspective: 900px;
+    perspective: 200px;
 
 }
 

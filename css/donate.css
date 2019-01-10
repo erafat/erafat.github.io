@@ -128,13 +128,15 @@ a{
 	background: #fff no-repeat center center;
 	background-size: 190px;
 	border-radius: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	box-shadow: 120px 120px 120px rgba(0,0,0,0.3);
     opacity: 100;
 	transition: all 1s ease-in-out;
-	transform-style: preserve-3d;
     transform-origin: center center;
     overflow: hidden;
 }
+
+transform-style: preserve-3d;
+
 #btc-key {
 	opacity: 0;
 	width: 2px;

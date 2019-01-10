@@ -32,8 +32,8 @@ a{
 	height: 100%;
 }
 .blur {
-	-webkit-filter: blur(20px);
-	filter: blur(20px);
+	-webkit-filter: blur(3px);
+	filter: blur(3px);
 }
 .tr3 {
 	transition: all .3s;

@@ -109,7 +109,8 @@ a{
 #donateBox #WeChat {
 	background-image: url(../img/wechat.svg);
 }
-#QRBox {
+
+/*#QRBox {
 	top: 0;
 	left: 0;
 	z-index: 1;
@@ -117,7 +118,8 @@ a{
 	display: none;
     perspective: 900px;
 
-}
+}*/
+
 #MainBox {
 	cursor: pointer;
 	position: absolute;

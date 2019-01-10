@@ -121,8 +121,8 @@ a{
 	cursor: pointer;
 	position: absolute;
 	text-align: center;
-	width: 230px;
-	height: 230px;
+	width: 200px;
+	height: 200px;
 	left: calc(50% - 100px);
 	top: calc(50% - 100px);
 	background: #fff no-repeat center center;

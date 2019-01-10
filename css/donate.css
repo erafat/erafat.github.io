@@ -79,9 +79,9 @@ a{
 	overflow: hidden;
 	line-height: 600px;
 	height: 28px;
-	-webkit-filter: grayscale(1);
-	filter: grayscale(1);
-	opacity: 1;
+	-webkit-filter: grayscale(99);
+	filter: grayscale(99);
+	opacity: 100;
 }
 
 }

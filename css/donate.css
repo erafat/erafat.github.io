@@ -83,11 +83,7 @@ a{
 	filter: grayscale(1);
 	opacity: 0.5;
 }
-#donateBox li:hover {
-	background-color: rgba(204, 217, 220,0.3);
-	-webkit-filter: grayscale(0);
-	filter: grayscale(0);
-	opacity: 1;
+
 }
 #donateBox>li:first-child {
 	border-width: 0;
@@ -102,9 +98,7 @@ a{
 	background-image: url(../img/bitcoin.svg);
 	line-height: 28px;
 }
-#donateBox>#BTC:hover {
-	overflow: visible;
-}
+
 #BTC>button {
 	opacity: 0;
 	cursor: pointer;
@@ -194,12 +188,8 @@ a{
 	top: 0;
 	left: 37px;
 }
-[data-footnote]:hover::before,[data-footnote]:hover::after {
-	opacity: 1;
-}
-[data-footnote]:hover::before,[data-footnote]:hover::after {
-	transform: translate3d(-50%,-7px,0);
-}
+
+
 
 #MainBox.showQR {
 	opacity: 1;
@@ -231,4 +221,84 @@ a{
 		opacity: 0;
 		transform: rotateZ(40deg) scale(0.6,0.6);
 	}
+}
+
+@keyframes showQR {
+    
+    ​    **from** {
+        
+        ​        transform: rotateX(90**deg**);
+        
+        ​    }
+    
+    ​    8% {
+        
+        ​        **opacity**: 1;
+        
+        ​        transform: rotateX(-60**deg**);
+        
+        ​    }
+    
+    ​    18% {
+        
+        ​        **opacity**: 1;
+        
+        ​        transform: rotateX(40**deg**);
+        
+        ​    }
+    
+    ​    34% {
+        
+        ​        **opacity**: 1;
+        
+        ​        transform: rotateX(-28**deg**);
+        
+        ​    }
+    
+    ​    44% {
+        
+        ​        **opacity**: 1;
+        
+        ​        transform: rotateX(18**deg**);
+        
+        ​    }
+    
+    ​    58% {
+        
+        ​        **opacity**: 1;
+        
+        ​        transform: rotateX(-12**deg**);
+        
+        ​    }
+    
+    ​    72% {
+        
+        ​        **opacity**: 1;
+        
+        ​        transform: rotateX(9**deg**);
+        
+        ​    }
+    
+    ​    88% {
+        
+        ​        **opacity**: 1;
+        
+        ​        transform: rotateX(-5**deg**);
+        
+        ​    }
+    
+    ​    96% {
+        
+        ​        **opacity**: 1;
+        
+        ​        transform: rotateX(2**deg**);
+        
+        ​    }
+    
+    ​    **to** {
+        
+        ​        **opacity**: 1;
+        
+        ​    }
+    
 }

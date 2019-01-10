@@ -58,7 +58,7 @@ a{
 	left: calc(50% - 150px);
 	top: calc(50% - 15px);
 	background-color: #fff;
-	border: 3px solid #ddd;
+	border: 1px solid #ddd;
 	border-radius: 1px;
 	width: 299px;
 	height: 28px;
@@ -73,7 +73,7 @@ a{
 	border-left: 1px solid #ddd;
 	background: no-repeat center center;
 	background-color: rgba(204, 217, 220,0.1);
-	background-size: 45px;
+	background-size: 100px;
 	transition: all .3s;
 	cursor: pointer;
 	overflow: hidden;

@@ -116,6 +116,7 @@ a{
 	background-color: rgba(255,255,255,0.3);
 	display: none;
     perspective: 900px;
+
 }
 #MainBox {
 	cursor: pointer;
@@ -133,8 +134,8 @@ a{
 	transition: all 1s ease-in-out;
     transform-origin: center center;
     transform-style: preserve-3d;
+    overflow: hidden;
 }
-overflow: hidden;
 
 
 #btc-key {
@@ -162,15 +163,17 @@ overflow: hidden;
 [data-footnote]:hover {
 	overflow: visible;
 }
-[data-footnote]::before, [data-footnote]::after {
+
+/*[data-footnote]::before, [data-footnote]::after {
 	position: absolute;
 	transition: all .3s;
 	transform: translate3d(-50%,0,0);
 	opacity: 0;
 	left: 37px;
-	z-index: 10;
-}
-[data-footnote]::before {
+    z-index: 10;
+}*/
+
+/*[data-footnote]::before {
 	content: attr(data-footnote);
 	border-radius: 6px;
 	background-color: rgba(100,100,100,0.8);
@@ -190,7 +193,7 @@ overflow: hidden;
 	top: 0;
 	left: 37px;
 }
-
+*/
 
 
 #MainBox.showQR {

@@ -58,8 +58,8 @@ a{
 	left: calc(50% - 150px);
 	top: calc(50% - 15px);
 	background-color: #fff;
-	border: 1px solid #ddd;
-	border-radius: 60px;
+	border: 30px solid #ddd;
+	border-radius: 1px;
 	width: 299px;
 	height: 28px;
 	float: left;

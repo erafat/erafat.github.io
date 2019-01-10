@@ -126,7 +126,7 @@ a{
 	left: calc(50% - 100px);
 	top: calc(50% - 100px);
 	background: #fff no-repeat center center;
-	background-size: 190px;
+	background-size: 210px;
 	border-radius: 6px;
 	box-shadow: 120px 120px 120px rgba(0,0,0,0.3);
     opacity: 100;

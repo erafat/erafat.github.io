@@ -121,12 +121,12 @@ a{
 	cursor: pointer;
 	position: absolute;
 	text-align: center;
-	width: 200px;
-	height: 200px;
+	width: 500px;
+	height: 500px;
 	left: calc(50% - 100px);
 	top: calc(50% - 100px);
 	background: #fff no-repeat center center;
-	background-size: 190px;
+	background-size: 500px;
 	border-radius: 6px;
 	box-shadow: 0px 2px 7px rgba(0,0,0,0.3);
     opacity: 0;

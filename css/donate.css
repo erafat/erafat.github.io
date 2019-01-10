@@ -91,18 +91,7 @@ a{
 #donateBox a {
 	display: block;
 }
-#donateBox #PayPal {
-	background-image: url(../img/paypal.svg);
-}
-#donateBox>#BTC {
-	background-image: url(../img/bitcoin.svg);
-	line-height: 28px;
-}
 
-#BTC>button {
-	opacity: 0;
-	cursor: pointer;
-}
 #donateBox #AliPay {
 	background-image: url(../img/alipay.svg);
 }
@@ -138,65 +127,6 @@ a{
     transform-style: preserve-3d;
     overflow: hidden;
 }
-
-
-#btc-key {
-	opacity: 0;
-	width: 2px;
-	height: 8px;
-	overflow: hidden;
-	left: -2px;
-	top: -8px;
-}
-#github {
-	width: 24px;
-	height: 24px;
-	left: calc(50% + 135px);
-	top: calc(50% - 30px);
-	background: no-repeat center center url(../img/github.svg);
-	background-size: contain;
-	opacity: 0.3;
-	transform: rotatez(15deg );
-}
-[data-footnote] {
-	position: relative;
-	overflow: hidden;
-}
-[data-footnote]:hover {
-	overflow: hidden;
-}
-
-[data-footnote]::before, [data-footnote]::after {
-	position: absolute;
-	transition: all .3s;
-	transform: translate3d(-50%,0,0);
-	opacity: 0;
-	left: 37px;
-    z-index: 10;
-}
-
-[data-footnote]::before {
-	content: attr(data-footnote);
-	border-radius: 6px;
-	background-color: rgba(100,100,100,0.8);
-	color: #fff;
-	height: 24px;
-	line-height: 24px;
-	padding: 0 6px;
-	font-size: 12px;
-	white-space: nowrap;
-	top: -24px;
-	left: 37px;
-}
-[data-footnote]::after {
-	content: '';
-	border: 5px solid #333;
-	border-color: rgba(100,100,100,0.8) transparent transparent transparent;
-	top: 0;
-	left: 37px;
-}
-
-
 
 #MainBox.showQR {
 	opacity: 1;

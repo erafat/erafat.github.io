@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://erafat.github.io/en/categories/</loc>
-  </url><url>
-    <loc>https://erafat.github.io/en/series/</loc>
-  </url><url>
-    <loc>https://erafat.github.io/en/tags/</loc>
-  </url><url>
-    <loc>https://erafat.github.io/en/</loc>
-  </url>
+  
+    
+  
+    
+      <url>
+            <loc>https://erafat.github.io/en/</loc>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+            <xhtml:link
+              rel="alternate"
+              hreflang="zh-cn"
+              href="https://erafat.github.io/"
+              />
+            <xhtml:link
+              rel="alternate"
+              hreflang="en"
+              href="https://erafat.github.io/en/"
+              />
+          </url>
+    
+  
+    
+  
+    
+  
+    
+  
 </urlset>

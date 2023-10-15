@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>人工智能 on 开窍</title>
+    <link>https://erafat.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</link>
+    <description>Recent content in 人工智能 on 开窍</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2023 尔大夫</copyright>
+    <lastBuildDate>Sat, 14 Oct 2023 23:21:52 -0400</lastBuildDate><atom:link href="https://erafat.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>用AI让听播客变得更主动</title>
+      <link>https://erafat.github.io/posts/aiassistedpodcast/</link>
+      <pubDate>Sat, 14 Oct 2023 23:21:52 -0400</pubDate>
+      
+      <guid>https://erafat.github.io/posts/aiassistedpodcast/</guid>
+      <description>背景 # 在整理一篇有关OSA（呼吸睡眠暂停综合征）和癫痫的综述的时候，恰好听到美国睡眠协会的一期播客，讲的是OSA和心血管疾病的七七八八。听过一遍之后觉得需要检索的点很多，放在过去那就是一边听，一边暂停，一边记笔记 &amp;ndash; 虽然说这样学起来也扎实，但我不是懒么，因为懒所以得做到有的放矢。</description>
+      
+    </item>
+    
+  </channel>
+</rss>

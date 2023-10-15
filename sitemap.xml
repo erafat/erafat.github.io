@@ -5,10 +5,12 @@
     
       <url>
             <loc>https://erafat.github.io/</loc>
-            <lastmod>2019-01-19T13:24:24+00:00</lastmod>
+            <lastmod>2023-10-14T23:21:52-04:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
+    
+  
     
   
     
@@ -16,12 +18,25 @@
     
       <url>
             <loc>https://erafat.github.io/posts/</loc>
-            <lastmod>2019-01-19T13:24:24+00:00</lastmod>
+            <lastmod>2023-10-14T23:21:52-04:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
     
   
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://erafat.github.io/posts/aiassistedpodcast/</loc>
+            <lastmod>2023-10-14T23:21:52-04:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
     
   
     
@@ -51,6 +66,14 @@
   
     
   
+    
+  
+    
+      <url>
+            <loc>https://erafat.github.io/stuff/</loc>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
     
   
 </urlset>

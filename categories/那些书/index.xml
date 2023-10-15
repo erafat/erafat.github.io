@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>开窍</title>
-    <link>https://erafat.github.io/</link>
-    <description>Recent content on 开窍</description>
+    <title>那些书 on 开窍</title>
+    <link>https://erafat.github.io/categories/%E9%82%A3%E4%BA%9B%E4%B9%A6/</link>
+    <description>Recent content in 那些书 on 开窍</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2023 尔大夫</copyright>
-    <lastBuildDate>Sat, 19 Jan 2019 13:24:24 +0000</lastBuildDate><atom:link href="https://erafat.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Now</title>
-      <link>https://erafat.github.io/now/</link>
-      <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://erafat.github.io/now/</guid>
-      <description> Now 页面会随着时间和当下生活的优先级而更新，用来让别人看见这个人现在生活的重点是什么，和提醒自己专注于当下最重要的事。 正在做 # 正在读 # 当下生活的重心 # </description>
-      
-    </item>
-    
+    <lastBuildDate>Sat, 19 Jan 2019 13:24:24 +0000</lastBuildDate><atom:link href="https://erafat.github.io/categories/%E9%82%A3%E4%BA%9B%E4%B9%A6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>医生给医生的书单</title>
       <link>https://erafat.github.io/posts/books-for-2019-med/</link>
@@ -52,16 +42,6 @@
   
 
 &lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://erafat.github.io/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://erafat.github.io/about/</guid>
-      <description>医生 兴趣是癫痫的手术治疗 超大杯美式 Apple Podcast， Overcast</description>
       
     </item>
     

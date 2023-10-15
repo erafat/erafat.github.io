@@ -7,64 +7,41 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2023 尔大夫</copyright>
-    <lastBuildDate>Sat, 14 Oct 2023 18:27:44 -0400</lastBuildDate><atom:link href="https://erafat.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Jan 2019 13:24:24 +0000</lastBuildDate><atom:link href="https://erafat.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>测试</title>
-      <link>https://erafat.github.io/posts/testing-copy-2/</link>
-      <pubDate>Sat, 14 Oct 2023 18:27:44 -0400</pubDate>
+      <title>医生给医生的书单</title>
+      <link>https://erafat.github.io/posts/books-for-2019-med/</link>
+      <pubDate>Sat, 19 Jan 2019 13:24:24 +0000</pubDate>
       
-      <guid>https://erafat.github.io/posts/testing-copy-2/</guid>
-      <description></description>
-      
-    </item>
+      <guid>https://erafat.github.io/posts/books-for-2019-med/</guid>
+      <description>&lt;p&gt;
+
+
+
+
+  
+  
     
-    <item>
-      <title>测试</title>
-      <link>https://erafat.github.io/posts/testing-copy-3/</link>
-      <pubDate>Sat, 14 Oct 2023 18:27:44 -0400</pubDate>
+  
+  
+    &lt;figure&gt;
       
-      <guid>https://erafat.github.io/posts/testing-copy-3/</guid>
-      <description></description>
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        srcset=&#34;
+        /posts/books-for-2019-med/OandR_hu7780874059507516199edbdf3bed3d36_170135_330x0_resize_q75_box.jpg 330w,
+        /posts/books-for-2019-med/OandR_hu7780874059507516199edbdf3bed3d36_170135_660x0_resize_q75_box.jpg 660w,
+        /posts/books-for-2019-med/OandR_hu7780874059507516199edbdf3bed3d36_170135_1024x0_resize_q75_box.jpg 1024w,
+        /posts/books-for-2019-med/OandR_hu7780874059507516199edbdf3bed3d36_170135_1320x0_resize_q75_box.jpg 2x&#34;
+        src=&#34;https://erafat.github.io/posts/books-for-2019-med/OandR_hu7780874059507516199edbdf3bed3d36_170135_660x0_resize_q75_box.jpg&#34;
+        alt=&#34;Robbin Williams and Oliver Sacks&#34;
+      /&gt;
       
-    </item>
-    
-    <item>
-      <title>测试</title>
-      <link>https://erafat.github.io/posts/testing-copy-4/</link>
-      <pubDate>Sat, 14 Oct 2023 18:27:44 -0400</pubDate>
       
-      <guid>https://erafat.github.io/posts/testing-copy-4/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>测试</title>
-      <link>https://erafat.github.io/posts/testing-copy-5/</link>
-      <pubDate>Sat, 14 Oct 2023 18:27:44 -0400</pubDate>
-      
-      <guid>https://erafat.github.io/posts/testing-copy-5/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>测试</title>
-      <link>https://erafat.github.io/posts/testing-copy/</link>
-      <pubDate>Sat, 14 Oct 2023 18:27:44 -0400</pubDate>
-      
-      <guid>https://erafat.github.io/posts/testing-copy/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>测试</title>
-      <link>https://erafat.github.io/posts/testing/</link>
-      <pubDate>Sat, 14 Oct 2023 18:27:44 -0400</pubDate>
-      
-      <guid>https://erafat.github.io/posts/testing/</guid>
-      <description></description>
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;</description>
       
     </item>
     

@@ -689,6 +689,77 @@ h2 {
   text-align: right;
 }
 
+.writing-hero {
+  padding-top: clamp(16px, 4vw, 54px);
+}
+
+.writing-hero h1,
+.essay-header h1 {
+  max-width: 1120px;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(42px, 7vw, 94px);
+  font-weight: 400;
+  line-height: .98;
+  letter-spacing: 0;
+}
+
+.writing-hero p,
+.essay-dek,
+.essay-body p {
+  color: var(--muted);
+  font-family: var(--mono);
+  line-height: 1.62;
+}
+
+.writing-hero p {
+  max-width: 72ch;
+  margin: 24px 0 0;
+  font-size: clamp(15px, 1.45vw, 19px);
+}
+
+.writing-list {
+  display: grid;
+  gap: 0;
+}
+
+.writing-list .writparent {
+  padding: 20px 0;
+}
+
+.essay-header {
+  padding-top: clamp(16px, 4vw, 54px);
+}
+
+.essay-meta {
+  margin: 0 0 18px;
+  color: var(--quiet);
+  font-family: var(--mono);
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.essay-dek {
+  max-width: 74ch;
+  margin: 26px 0 0;
+  font-size: clamp(15px, 1.45vw, 19px);
+}
+
+.essay-body {
+  display: grid;
+  gap: 20px;
+  max-width: 82ch;
+}
+
+.essay-body p {
+  margin: 0;
+  font-size: clamp(15px, 1.35vw, 18px);
+}
+
+.essay-body .draft-note {
+  color: var(--quiet);
+}
+
 hr {
   width: 100%;
   margin: 0;

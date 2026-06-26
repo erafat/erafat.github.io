@@ -422,9 +422,41 @@ nav span {
   grid-row: 2;
 }
 
+.tile-writer::before {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+    url("assets/riter-preview.jpg") center / cover no-repeat;
+  opacity: 0;
+}
+
 .tile-comics {
   grid-column: 3;
   grid-row: 2;
+}
+
+.tile-comics::before {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+    url("assets/waiting-room-preview.jpg") center / cover no-repeat;
+  opacity: 0;
+}
+
+.tile-writer.is-active-tile::before,
+.tile-writer:hover::before,
+.tile-writer:focus-visible::before,
+.tile-comics.is-active-tile::before,
+.tile-comics:hover::before,
+.tile-comics:focus-visible::before {
+  opacity: 1;
+}
+
+.tile-writer.is-active-tile .tile-copy,
+.tile-writer:hover .tile-copy,
+.tile-writer:focus-visible .tile-copy,
+.tile-comics.is-active-tile .tile-copy,
+.tile-comics:hover .tile-copy,
+.tile-comics:focus-visible .tile-copy {
+  opacity: 0;
 }
 
 .project-mosaic.is-prompt-active .tile-prompt,
@@ -1059,6 +1091,26 @@ hr {
     background:
       linear-gradient(rgba(255, 255, 255, .68), rgba(255, 255, 255, .68)),
       url("assets/aed-site-preview.jpg") center / cover no-repeat;
+    opacity: 1;
+  }
+
+  .tile-writer::before,
+  .tile-writer.is-active-tile::before,
+  .tile-writer:hover::before,
+  .tile-writer:focus-visible::before {
+    background:
+      linear-gradient(rgba(255, 255, 255, .68), rgba(255, 255, 255, .68)),
+      url("assets/riter-preview.jpg") center / cover no-repeat;
+    opacity: 1;
+  }
+
+  .tile-comics::before,
+  .tile-comics.is-active-tile::before,
+  .tile-comics:hover::before,
+  .tile-comics:focus-visible::before {
+    background:
+      linear-gradient(rgba(255, 255, 255, .68), rgba(255, 255, 255, .68)),
+      url("assets/waiting-room-preview.jpg") center / cover no-repeat;
     opacity: 1;
   }
 

@@ -1024,6 +1024,8 @@ hr {
   }
 
   .project-mosaic,
+  .project-mosaic:has(.mosaic-tile:hover),
+  .project-mosaic:has(.mosaic-tile:focus-visible),
   .project-mosaic.is-active,
   .project-mosaic.is-aed-active,
   .project-mosaic.is-prompt-active,
@@ -1061,12 +1063,14 @@ hr {
     min-height: 248px;
     padding: 20px;
     border-right: 0;
+    background: var(--paper);
     transition: none;
   }
 
   .mosaic-tile:hover,
   .mosaic-tile:focus-visible {
     z-index: auto;
+    background: var(--paper);
   }
 
   .tile-copy,
@@ -1084,34 +1088,13 @@ hr {
     transition: none;
   }
 
-  .tile-aed::before,
-  .tile-aed.is-active-tile::before,
-  .tile-aed:hover::before,
-  .tile-aed:focus-visible::before {
-    background:
-      linear-gradient(rgba(255, 255, 255, .68), rgba(255, 255, 255, .68)),
-      url("assets/aed-site-preview.jpg") center / cover no-repeat;
+  .mosaic-tile::before,
+  .mosaic-tile.is-active-tile::before,
+  .mosaic-tile:hover::before,
+  .mosaic-tile:focus-visible::before {
+    background: var(--paper);
     opacity: 1;
-  }
-
-  .tile-writer::before,
-  .tile-writer.is-active-tile::before,
-  .tile-writer:hover::before,
-  .tile-writer:focus-visible::before {
-    background:
-      linear-gradient(rgba(255, 255, 255, .68), rgba(255, 255, 255, .68)),
-      url("assets/riter-preview.jpg") center / cover no-repeat;
-    opacity: 1;
-  }
-
-  .tile-comics::before,
-  .tile-comics.is-active-tile::before,
-  .tile-comics:hover::before,
-  .tile-comics:focus-visible::before {
-    background:
-      linear-gradient(rgba(255, 255, 255, .68), rgba(255, 255, 255, .68)),
-      url("assets/waiting-room-preview.jpg") center / cover no-repeat;
-    opacity: 1;
+    transition: none;
   }
 
   .tile-detail,

@@ -876,27 +876,87 @@ hr {
     height: 780px;
   }
 
-  .tile-aed {
+  .project-mosaic.is-aed-active,
+  .project-mosaic:has(.tile-aed:hover),
+  .project-mosaic:has(.tile-aed:focus-visible) {
+    grid-template-columns: 1.35fr .65fr;
+    grid-template-rows: 1fr 1fr .82fr;
+  }
+
+  .project-mosaic.is-prompt-active,
+  .project-mosaic:has(.tile-prompt:hover),
+  .project-mosaic:has(.tile-prompt:focus-visible) {
+    grid-template-columns: .75fr 1.25fr;
+    grid-template-rows: 1.35fr .82fr .82fr;
+  }
+
+  .project-mosaic.is-semantic-active,
+  .project-mosaic:has(.tile-semantic:hover),
+  .project-mosaic:has(.tile-semantic:focus-visible) {
+    grid-template-columns: .75fr 1.25fr;
+    grid-template-rows: .82fr 1.35fr .82fr;
+  }
+
+  .project-mosaic.is-writer-active,
+  .project-mosaic:has(.tile-writer:hover),
+  .project-mosaic:has(.tile-writer:focus-visible) {
+    grid-template-columns: 1.35fr .65fr;
+    grid-template-rows: .82fr .82fr 1.35fr;
+  }
+
+  .project-mosaic.is-comics-active,
+  .project-mosaic:has(.tile-comics:hover),
+  .project-mosaic:has(.tile-comics:focus-visible) {
+    grid-template-columns: .65fr 1.35fr;
+    grid-template-rows: .82fr .82fr 1.35fr;
+  }
+
+  .tile-aed,
+  .project-mosaic.is-aed-active .tile-aed,
+  .project-mosaic.is-prompt-active .tile-aed,
+  .project-mosaic.is-semantic-active .tile-aed,
+  .project-mosaic.is-writer-active .tile-aed,
+  .project-mosaic.is-comics-active .tile-aed {
     grid-column: 1;
     grid-row: 1 / span 2;
   }
 
-  .tile-prompt {
+  .tile-prompt,
+  .project-mosaic.is-aed-active .tile-prompt,
+  .project-mosaic.is-prompt-active .tile-prompt,
+  .project-mosaic.is-semantic-active .tile-prompt,
+  .project-mosaic.is-writer-active .tile-prompt,
+  .project-mosaic.is-comics-active .tile-prompt {
     grid-column: 2;
     grid-row: 1;
   }
 
-  .tile-semantic {
+  .tile-semantic,
+  .project-mosaic.is-aed-active .tile-semantic,
+  .project-mosaic.is-prompt-active .tile-semantic,
+  .project-mosaic.is-semantic-active .tile-semantic,
+  .project-mosaic.is-writer-active .tile-semantic,
+  .project-mosaic.is-comics-active .tile-semantic {
     grid-column: 2;
     grid-row: 2;
   }
 
-  .tile-comics {
+  .tile-comics,
+  .project-mosaic.is-aed-active .tile-comics,
+  .project-mosaic.is-prompt-active .tile-comics,
+  .project-mosaic.is-semantic-active .tile-comics,
+  .project-mosaic.is-writer-active .tile-comics,
+  .project-mosaic.is-comics-active .tile-comics {
     grid-column: 2;
     grid-row: 3;
   }
 
-  .tile-writer {
+  .tile-writer,
+  .project-mosaic.is-aed-active .tile-writer,
+  .project-mosaic.is-prompt-active .tile-writer,
+  .project-mosaic.is-semantic-active .tile-writer,
+  .project-mosaic.is-writer-active .tile-writer,
+  .project-mosaic.is-comics-active .tile-writer {
     grid-column: 1;
     grid-row: 3;
   }

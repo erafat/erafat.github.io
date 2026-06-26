@@ -802,6 +802,33 @@ h2 {
   text-transform: uppercase;
 }
 
+.essay-figure {
+  width: 100%;
+  margin: 10px 0 16px;
+}
+
+.essay-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper-soft);
+}
+
+.essay-figure figcaption {
+  max-width: 68ch;
+  margin: 10px 0 0;
+  color: var(--quiet);
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.essay-figure-wide {
+  margin-top: 4px;
+}
+
 .essay-body blockquote {
   max-width: 760px;
   margin: 0;

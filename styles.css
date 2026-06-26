@@ -126,6 +126,8 @@ a {
   width: 46px;
   height: 46px;
   object-fit: contain;
+  transform: rotate(-5deg);
+  transform-origin: center;
 }
 
 .site-mark {
@@ -1214,6 +1216,7 @@ hr {
   }
 
   .mosaic-tile:hover,
+  .mosaic-tile:active,
   .mosaic-tile:focus-visible {
     z-index: auto;
     background: var(--paper);
@@ -1222,8 +1225,10 @@ hr {
   .tile-copy,
   .mosaic-tile.is-active-tile .tile-copy,
   .mosaic-tile:hover .tile-copy,
+  .mosaic-tile:active .tile-copy,
   .mosaic-tile:focus-visible .tile-copy,
   .project-mosaic:has(.mosaic-tile:hover) .mosaic-tile:not(:hover) .tile-copy,
+  .project-mosaic:has(.mosaic-tile:active) .mosaic-tile:not(:active) .tile-copy,
   .project-mosaic.is-active .mosaic-tile:not(.is-active-tile) .tile-copy {
     top: 20px;
     left: 20px;
@@ -1237,6 +1242,7 @@ hr {
   .mosaic-tile::before,
   .mosaic-tile.is-active-tile::before,
   .mosaic-tile:hover::before,
+  .mosaic-tile:active::before,
   .mosaic-tile:focus-visible::before {
     background: var(--paper);
     opacity: 1;
@@ -1246,6 +1252,7 @@ hr {
   .tile-detail,
   .mosaic-tile.is-active-tile .tile-detail,
   .mosaic-tile:hover .tile-detail,
+  .mosaic-tile:active .tile-detail,
   .mosaic-tile:focus-visible .tile-detail,
   .project-mosaic.is-active .mosaic-tile:not(.is-active-tile) .tile-detail {
     max-width: 36ch;
@@ -1257,10 +1264,17 @@ hr {
   .tile-title,
   .project-mosaic.is-active .mosaic-tile:not(.is-active-tile) .tile-title,
   .project-mosaic:has(.mosaic-tile:hover) .mosaic-tile:not(:hover) .tile-title,
+  .project-mosaic:has(.mosaic-tile:active) .mosaic-tile:not(:active) .tile-title,
   .tile-aed .tile-title,
   .tile-aed.is-active-tile .tile-title,
   .tile-aed:hover .tile-title,
-  .tile-aed:focus-visible .tile-title {
+  .tile-aed:active .tile-title,
+  .tile-aed:focus-visible .tile-title,
+  .tile-comics .tile-title,
+  .tile-comics.is-active-tile .tile-title,
+  .tile-comics:hover .tile-title,
+  .tile-comics:active .tile-title,
+  .tile-comics:focus-visible .tile-title {
     max-width: 14ch;
     font-size: clamp(36px, 12vw, 58px);
     transform: none;

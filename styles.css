@@ -110,21 +110,24 @@ a {
   cursor: pointer;
 }
 
-.portrait-mark {
-  overflow: visible;
+.site-mark {
+  padding: 0;
   border: 0;
-  border-radius: 0;
   background: transparent;
   box-shadow: none;
+  transition: transform .18s ease, filter .18s ease;
 }
 
-.portrait-mark img {
+.site-mark:hover {
+  transform: translateY(-1px);
+  filter: drop-shadow(0 10px 18px var(--shadow));
+}
+
+.site-mark img {
   display: block;
-  width: 46px;
-  height: 46px;
+  width: 38px;
+  height: 38px;
   object-fit: contain;
-  transform: rotate(-7deg);
-  transform-origin: 50% 65%;
 }
 
 nav {
@@ -786,6 +789,43 @@ h2 {
 .essay-body p {
   margin: 0;
   font-size: clamp(15px, 1.35vw, 18px);
+}
+
+.essay-body h2 {
+  max-width: 760px;
+  margin: 16px 0 -4px;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.essay-body blockquote {
+  max-width: 760px;
+  margin: 0;
+  padding-left: 18px;
+  border-left: 2px solid var(--accent);
+  color: var(--ink);
+}
+
+.essay-body blockquote p {
+  color: var(--ink);
+  font-size: clamp(15px, 1.35vw, 18px);
+  font-style: italic;
+}
+
+.essay-body .source-links {
+  color: var(--quiet);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.essay-body .source-links a {
+  text-decoration: underline;
+  text-decoration-thickness: .08em;
+  text-underline-offset: .18em;
 }
 
 .essay-body .draft-note {

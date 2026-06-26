@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Signal map visual</title>
+  <desc id="desc">An editorial signal map with clinical, research, and writing nodes connected by fine lines.</desc>
+  <defs>
+    <pattern id="paper" width="28" height="28" patternUnits="userSpaceOnUse">
+      <rect width="28" height="28" fill="#f7f3ea"/>
+      <circle cx="5" cy="8" r=".7" fill="#d8d0c2" opacity=".35"/>
+      <circle cx="19" cy="16" r=".55" fill="#bfc7c9" opacity=".35"/>
+      <circle cx="12" cy="24" r=".45" fill="#e6b8a7" opacity=".32"/>
+    </pattern>
+    <filter id="soft">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#15202a" flood-opacity=".12"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" rx="18" fill="url(#paper)"/>
+  <g opacity=".5" stroke="#242424" stroke-width="1">
+    <path d="M0 138H1200M0 278H1200M0 418H1200M0 558H1200"/>
+    <path d="M150 0V760M330 0V760M510 0V760M690 0V760M870 0V760M1050 0V760"/>
+  </g>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M90 406c37 0 40-92 78-92s42 172 82 172 41-241 84-241 42 166 82 166 43-61 82-61 41 91 82 91 42-193 84-193 41 266 83 266 42-118 83-118 41 20 82 20 42-74 83-74 40 100 79 100" stroke="#0f1720" stroke-width="4"/>
+    <path d="M90 407c37 0 40-92 78-92s42 172 82 172 41-241 84-241 42 166 82 166 43-61 82-61 41 91 82 91 42-193 84-193 41 266 83 266 42-118 83-118 41 20 82 20 42-74 83-74 40 100 79 100" stroke="#5e87a1" stroke-width="1.4"/>
+  </g>
+  <g filter="url(#soft)">
+    <rect x="102" y="104" width="235" height="132" rx="8" fill="#fffdf8" stroke="#202020" stroke-opacity=".18"/>
+    <text x="126" y="145" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" fill="#202020">clinic</text>
+    <text x="126" y="181" font-family="Georgia, serif" font-size="28" fill="#202020">Epilepsy care</text>
+    <text x="126" y="208" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#5f6468">human review first</text>
+  </g>
+  <g filter="url(#soft)">
+    <rect x="808" y="119" width="280" height="145" rx="8" fill="#fffdf8" stroke="#202020" stroke-opacity=".18"/>
+    <text x="832" y="160" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" fill="#202020">research</text>
+    <text x="832" y="197" font-family="Georgia, serif" font-size="29" fill="#202020">Clinical AI</text>
+    <text x="832" y="225" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#5f6468">evidence-bound systems</text>
+  </g>
+  <g filter="url(#soft)">
+    <rect x="445" y="486" width="310" height="148" rx="8" fill="#fffdf8" stroke="#202020" stroke-opacity=".18"/>
+    <text x="469" y="528" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" fill="#202020">writing</text>
+    <text x="469" y="565" font-family="Georgia, serif" font-size="29" fill="#202020">Ideas with edges</text>
+    <text x="469" y="593" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#5f6468">medicine, strategy, tools</text>
+  </g>
+  <g fill="#202020">
+    <circle cx="337" cy="245" r="7"/>
+    <circle cx="808" cy="263" r="7"/>
+    <circle cx="600" cy="486" r="7"/>
+  </g>
+  <g stroke="#202020" stroke-width="1.5" opacity=".32">
+    <path d="M337 245 510 350 600 486"/>
+    <path d="M808 263 690 355 600 486"/>
+  </g>
+</svg>

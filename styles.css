@@ -3,6 +3,7 @@
   --bg: #ffffff;
   --paper: #ffffff;
   --ink: #1f2428;
+  --quote-ink: #394a50;
   --muted: rgba(31, 36, 40, .62);
   --quiet: rgba(31, 36, 40, .42);
   --line: rgba(31, 36, 40, .16);
@@ -26,6 +27,7 @@
   --bg: #111313;
   --paper: #171919;
   --ink: #f0eee8;
+  --quote-ink: #d8dedb;
   --muted: rgba(240, 238, 232, .64);
   --quiet: rgba(240, 238, 232, .42);
   --line: rgba(240, 238, 232, .18);
@@ -835,11 +837,11 @@ h2 {
   margin: 0;
   padding-left: 18px;
   border-left: 2px solid var(--accent);
-  color: var(--ink);
+  color: var(--quote-ink);
 }
 
 .essay-body blockquote p {
-  color: var(--ink);
+  color: var(--quote-ink);
   font-size: clamp(15px, 1.35vw, 18px);
   font-style: italic;
 }

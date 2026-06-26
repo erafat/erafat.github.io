@@ -112,6 +112,18 @@ a {
   cursor: pointer;
 }
 
+.portrait-mark {
+  overflow: hidden;
+  padding: 0;
+}
+
+.portrait-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .site-mark {
   padding: 0;
   border: 0;

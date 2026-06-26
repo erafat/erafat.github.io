@@ -11,6 +11,7 @@
 
   const mosaic = document.querySelector(".project-mosaic");
   const projectTiles = document.querySelectorAll(".mosaic-tile");
+  const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
   const tileStates = {
     "tile-aed": "is-aed-active",
     "tile-prompt": "is-prompt-active",
@@ -27,6 +28,7 @@
 
   projectTiles.forEach((tile) => {
     function activateTile() {
+      if (!canHover) return;
       const state = Object.keys(tileStates).find((className) => tile.classList.contains(className));
       if (!state || !mosaic) return;
       clearProjectState();
@@ -37,10 +39,10 @@
     tile.addEventListener("pointerenter", activateTile);
     tile.addEventListener("mouseover", activateTile);
 
-    tile.addEventListener("focus", activateTile);
+    if (canHover) tile.addEventListener("focus", activateTile);
   });
 
-  if (mosaic) {
+  if (mosaic && canHover) {
     mosaic.addEventListener("pointerleave", clearProjectState);
     mosaic.addEventListener("focusout", function (event) {
       if (!mosaic.contains(event.relatedTarget)) clearProjectState();

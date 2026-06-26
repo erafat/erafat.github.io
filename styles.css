@@ -1100,7 +1100,8 @@ hr {
   .tile-detail,
   .mosaic-tile.is-active-tile .tile-detail,
   .mosaic-tile:hover .tile-detail,
-  .mosaic-tile:focus-visible .tile-detail {
+  .mosaic-tile:focus-visible .tile-detail,
+  .project-mosaic.is-active .mosaic-tile:not(.is-active-tile) .tile-detail {
     max-width: 36ch;
     opacity: 1;
     transform: none;

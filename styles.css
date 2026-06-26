@@ -1114,13 +1114,7 @@ hr {
   .tile-aed .tile-title,
   .tile-aed.is-active-tile .tile-title,
   .tile-aed:hover .tile-title,
-  .tile-aed:focus-visible .tile-title,
-  .tile-comics.is-active-tile .tile-title,
-  .tile-comics:hover .tile-title,
-  .tile-comics:focus-visible .tile-title,
-  .tile-writer.is-active-tile .tile-title,
-  .tile-writer:hover .tile-title,
-  .tile-writer:focus-visible .tile-title {
+  .tile-aed:focus-visible .tile-title {
     max-width: 14ch;
     font-size: clamp(36px, 12vw, 58px);
     transform: none;

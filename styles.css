@@ -297,9 +297,9 @@ nav span {
 .project-mosaic {
   position: relative;
   display: grid;
-  grid-template-columns: 5fr 4fr 3fr;
-  grid-template-rows: 1fr 1fr .74fr;
-  height: clamp(560px, 56vw, 700px);
+  grid-template-columns: 5fr 3fr 3fr 3fr;
+  grid-template-rows: 1fr 1fr;
+  height: clamp(420px, 46vw, 560px);
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
@@ -309,69 +309,69 @@ nav span {
 }
 
 .project-mosaic.is-aed-active {
-  grid-template-columns: 7fr 3fr 2fr;
-  grid-template-rows: 1fr 1fr .62fr;
+  grid-template-columns: 7fr 2.5fr 2.5fr 2.5fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .project-mosaic:has(.tile-aed:hover),
 .project-mosaic:has(.tile-aed:focus-visible) {
-  grid-template-columns: 7fr 3fr 2fr;
-  grid-template-rows: 1fr 1fr .62fr;
+  grid-template-columns: 7fr 2.5fr 2.5fr 2.5fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .project-mosaic.is-prompt-active {
-  grid-template-columns: 3fr 5fr 4fr;
-  grid-template-rows: 1.35fr .65fr .62fr;
+  grid-template-columns: 3fr 5fr 3fr 3fr;
+  grid-template-rows: 1.35fr .65fr;
 }
 
 .project-mosaic:has(.tile-prompt:hover),
 .project-mosaic:has(.tile-prompt:focus-visible) {
-  grid-template-columns: 3fr 5fr 4fr;
-  grid-template-rows: 1.35fr .65fr .62fr;
+  grid-template-columns: 3fr 5fr 3fr 3fr;
+  grid-template-rows: 1.35fr .65fr;
 }
 
 .project-mosaic.is-semantic-active {
-  grid-template-columns: 3fr 4fr 5fr;
-  grid-template-rows: 1.35fr .65fr .62fr;
+  grid-template-columns: 3fr 3fr 5fr 3fr;
+  grid-template-rows: 1.35fr .65fr;
 }
 
 .project-mosaic:has(.tile-semantic:hover),
 .project-mosaic:has(.tile-semantic:focus-visible) {
-  grid-template-columns: 3fr 4fr 5fr;
-  grid-template-rows: 1.35fr .65fr .62fr;
+  grid-template-columns: 3fr 3fr 5fr 3fr;
+  grid-template-rows: 1.35fr .65fr;
 }
 
 .project-mosaic.is-writer-active {
-  grid-template-columns: 3fr 5fr 4fr;
-  grid-template-rows: .65fr 1.35fr .62fr;
+  grid-template-columns: 3fr 4fr 4fr 3fr;
+  grid-template-rows: .65fr 1.35fr;
 }
 
 .project-mosaic:has(.tile-writer:hover),
 .project-mosaic:has(.tile-writer:focus-visible) {
-  grid-template-columns: 3fr 5fr 4fr;
-  grid-template-rows: .65fr 1.35fr .62fr;
+  grid-template-columns: 3fr 4fr 4fr 3fr;
+  grid-template-rows: .65fr 1.35fr;
 }
 
 .project-mosaic.is-comics-active {
-  grid-template-columns: 3fr 4fr 5fr;
-  grid-template-rows: .62fr 1.38fr .62fr;
+  grid-template-columns: 3fr 3fr 3fr 5fr;
+  grid-template-rows: .65fr 1.35fr;
 }
 
 .project-mosaic:has(.tile-comics:hover),
 .project-mosaic:has(.tile-comics:focus-visible) {
-  grid-template-columns: 3fr 4fr 5fr;
-  grid-template-rows: .62fr 1.38fr .62fr;
+  grid-template-columns: 3fr 3fr 3fr 5fr;
+  grid-template-rows: .65fr 1.35fr;
 }
 
 .project-mosaic.is-handout-active {
-  grid-template-columns: 3fr 4fr 5fr;
-  grid-template-rows: .76fr .76fr 1.18fr;
+  grid-template-columns: 3fr 3fr 3fr 5fr;
+  grid-template-rows: 1.35fr .65fr;
 }
 
 .project-mosaic:has(.tile-handout:hover),
 .project-mosaic:has(.tile-handout:focus-visible) {
-  grid-template-columns: 3fr 4fr 5fr;
-  grid-template-rows: .76fr .76fr 1.18fr;
+  grid-template-columns: 3fr 3fr 3fr 5fr;
+  grid-template-rows: 1.35fr .65fr;
 }
 
 .mosaic-tile {
@@ -452,7 +452,7 @@ nav span {
 }
 
 .tile-writer {
-  grid-column: 2;
+  grid-column: 2 / span 2;
   grid-row: 2;
 }
 
@@ -464,13 +464,13 @@ nav span {
 }
 
 .tile-comics {
-  grid-column: 3;
+  grid-column: 4;
   grid-row: 2;
 }
 
 .tile-handout {
-  grid-column: 1 / span 3;
-  grid-row: 3;
+  grid-column: 4;
+  grid-row: 1;
 }
 
 .tile-comics::before {
@@ -515,18 +515,18 @@ nav span {
 }
 
 .project-mosaic.is-writer-active .tile-writer {
-  grid-column: 2;
+  grid-column: 2 / span 2;
   grid-row: 2;
 }
 
 .project-mosaic.is-comics-active .tile-comics {
-  grid-column: 3;
+  grid-column: 4;
   grid-row: 2;
 }
 
 .project-mosaic.is-handout-active .tile-handout {
-  grid-column: 1 / span 3;
-  grid-row: 3;
+  grid-column: 4;
+  grid-row: 1;
 }
 
 .project-mosaic.is-prompt-active .tile-comics {
@@ -986,50 +986,50 @@ hr {
 
   .project-mosaic {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr .84fr;
-    height: 920px;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 780px;
   }
 
   .project-mosaic.is-aed-active,
   .project-mosaic:has(.tile-aed:hover),
   .project-mosaic:has(.tile-aed:focus-visible) {
     grid-template-columns: 1.35fr .65fr;
-    grid-template-rows: 1fr 1fr .82fr .74fr;
+    grid-template-rows: 1fr 1fr .82fr;
   }
 
   .project-mosaic.is-prompt-active,
   .project-mosaic:has(.tile-prompt:hover),
   .project-mosaic:has(.tile-prompt:focus-visible) {
     grid-template-columns: .75fr 1.25fr;
-    grid-template-rows: 1.35fr .82fr .82fr .74fr;
+    grid-template-rows: 1.35fr .82fr .82fr;
   }
 
   .project-mosaic.is-semantic-active,
   .project-mosaic:has(.tile-semantic:hover),
   .project-mosaic:has(.tile-semantic:focus-visible) {
     grid-template-columns: .75fr 1.25fr;
-    grid-template-rows: .82fr 1.35fr .82fr .74fr;
+    grid-template-rows: .82fr 1.35fr .82fr;
   }
 
   .project-mosaic.is-writer-active,
   .project-mosaic:has(.tile-writer:hover),
   .project-mosaic:has(.tile-writer:focus-visible) {
     grid-template-columns: 1.35fr .65fr;
-    grid-template-rows: .82fr .82fr 1.35fr .74fr;
+    grid-template-rows: .82fr .82fr 1.35fr;
   }
 
   .project-mosaic.is-comics-active,
   .project-mosaic:has(.tile-comics:hover),
   .project-mosaic:has(.tile-comics:focus-visible) {
     grid-template-columns: .65fr 1.35fr;
-    grid-template-rows: .82fr .82fr 1.35fr .74fr;
+    grid-template-rows: .82fr .82fr 1.35fr;
   }
 
   .project-mosaic.is-handout-active,
   .project-mosaic:has(.tile-handout:hover),
   .project-mosaic:has(.tile-handout:focus-visible) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: .82fr .82fr .82fr 1.24fr;
+    grid-template-columns: .65fr 1.35fr;
+    grid-template-rows: 1.35fr .82fr .82fr;
   }
 
   .tile-aed,
@@ -1094,8 +1094,8 @@ hr {
   .project-mosaic.is-writer-active .tile-handout,
   .project-mosaic.is-comics-active .tile-handout,
   .project-mosaic.is-handout-active .tile-handout {
-    grid-column: 1 / span 2;
-    grid-row: 4;
+    grid-column: 2;
+    grid-row: 2;
   }
 
   .grid-container {

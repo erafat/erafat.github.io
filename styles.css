@@ -399,6 +399,12 @@ nav span {
   transition: opacity .28s ease;
 }
 
+/* New mosaic tiles get hover previews by adding has-preview and --tile-preview. */
+.mosaic-tile.has-preview::before {
+  background: var(--tile-preview) center / cover no-repeat;
+  opacity: 0;
+}
+
 .mosaic-tile:hover,
 .mosaic-tile:focus-visible {
   z-index: 5;
@@ -422,22 +428,15 @@ nav span {
   grid-row: 1 / span 2;
 }
 
-.tile-aed::before {
-  background:
-    linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
-    url("assets/aed-site-preview.jpg") center / cover no-repeat;
-  opacity: 0;
-}
-
-.tile-aed.is-active-tile::before,
-.tile-aed:hover::before,
-.tile-aed:focus-visible::before {
+.mosaic-tile.has-preview.is-active-tile::before,
+.mosaic-tile.has-preview:hover::before,
+.mosaic-tile.has-preview:focus-visible::before {
   opacity: 1;
 }
 
-.tile-aed.is-active-tile .tile-copy,
-.tile-aed:hover .tile-copy,
-.tile-aed:focus-visible .tile-copy {
+.mosaic-tile.has-preview.is-active-tile .tile-copy,
+.mosaic-tile.has-preview:hover .tile-copy,
+.mosaic-tile.has-preview:focus-visible .tile-copy {
   opacity: 0;
 }
 
@@ -456,13 +455,6 @@ nav span {
   grid-row: 2;
 }
 
-.tile-writer::before {
-  background:
-    linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
-    url("assets/riter-preview.jpg") center / cover no-repeat;
-  opacity: 0;
-}
-
 .tile-comics {
   grid-column: 4;
   grid-row: 2;
@@ -471,31 +463,6 @@ nav span {
 .tile-handout {
   grid-column: 4;
   grid-row: 1;
-}
-
-.tile-comics::before {
-  background:
-    linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
-    url("assets/waiting-room-preview.jpg") center / cover no-repeat;
-  opacity: 0;
-}
-
-.tile-writer.is-active-tile::before,
-.tile-writer:hover::before,
-.tile-writer:focus-visible::before,
-.tile-comics.is-active-tile::before,
-.tile-comics:hover::before,
-.tile-comics:focus-visible::before {
-  opacity: 1;
-}
-
-.tile-writer.is-active-tile .tile-copy,
-.tile-writer:hover .tile-copy,
-.tile-writer:focus-visible .tile-copy,
-.tile-comics.is-active-tile .tile-copy,
-.tile-comics:hover .tile-copy,
-.tile-comics:focus-visible .tile-copy {
-  opacity: 0;
 }
 
 .project-mosaic.is-prompt-active .tile-prompt,
@@ -538,11 +505,14 @@ nav span {
   top: clamp(16px, 2.2vw, 28px);
   left: clamp(16px, 2.2vw, 28px);
   right: clamp(16px, 2.2vw, 28px);
+  bottom: clamp(16px, 2.2vw, 28px);
   z-index: 1;
   display: grid;
   align-content: start;
   justify-items: start;
-  gap: 10px;
+  gap: clamp(6px, 1vw, 10px);
+  min-width: 0;
+  overflow: hidden;
   transform: translateY(var(--tile-copy-y, clamp(42px, 6vw, 72px)));
   transition: transform .42s cubic-bezier(.22, 1, .36, 1), opacity .28s ease;
 }
@@ -566,25 +536,34 @@ nav span {
   font-size: 12px;
   line-height: 1.35;
   text-transform: uppercase;
+  overflow-wrap: anywhere;
 }
 
 .tile-title {
   max-width: 13ch;
   font-family: var(--serif);
-  font-size: clamp(34px, 5vw, 68px);
+  font-size: var(--tile-title-size, clamp(28px, 4vw, 54px));
   font-weight: 400;
   line-height: .93;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
   transition: font-size .42s cubic-bezier(.22, 1, .36, 1);
 }
 
 .tile-detail {
   max-width: 34ch;
-  margin-top: 12px;
+  max-height: 0;
+  margin-top: 0;
   font-size: 13px;
   line-height: 1.45;
   opacity: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--tile-detail-lines, 4);
+  overflow: hidden;
+  overflow-wrap: anywhere;
   transform: translateY(10px);
-  transition: opacity .28s ease, transform .28s ease;
+  transition: max-height .28s ease, margin-top .28s ease, opacity .28s ease, transform .28s ease;
 }
 
 .project-mosaic.is-active .mosaic-tile:not(.is-active-tile) .tile-title {
@@ -602,6 +581,8 @@ nav span {
 .mosaic-tile.is-active-tile .tile-detail,
 .mosaic-tile:hover .tile-detail,
 .mosaic-tile:focus-visible .tile-detail {
+  max-height: 8.8em;
+  margin-top: 12px;
   opacity: 1;
   transform: translateY(0);
 }
@@ -612,7 +593,7 @@ nav span {
 
 .tile-comics .tile-title,
 .tile-handout .tile-title {
-  font-size: clamp(32px, 4vw, 54px);
+  font-size: var(--tile-title-size, clamp(26px, 3.4vw, 44px));
 }
 
 .project-mosaic.is-active .tile-aed:not(.is-active-tile) .tile-title {
@@ -986,50 +967,50 @@ hr {
 
   .project-mosaic {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    height: 780px;
+    grid-template-rows: 1fr 1fr 1fr .84fr;
+    height: 920px;
   }
 
   .project-mosaic.is-aed-active,
   .project-mosaic:has(.tile-aed:hover),
   .project-mosaic:has(.tile-aed:focus-visible) {
     grid-template-columns: 1.35fr .65fr;
-    grid-template-rows: 1fr 1fr .82fr;
+    grid-template-rows: 1fr 1fr .82fr .74fr;
   }
 
   .project-mosaic.is-prompt-active,
   .project-mosaic:has(.tile-prompt:hover),
   .project-mosaic:has(.tile-prompt:focus-visible) {
     grid-template-columns: .75fr 1.25fr;
-    grid-template-rows: 1.35fr .82fr .82fr;
+    grid-template-rows: 1.35fr .82fr .82fr .74fr;
   }
 
   .project-mosaic.is-semantic-active,
   .project-mosaic:has(.tile-semantic:hover),
   .project-mosaic:has(.tile-semantic:focus-visible) {
     grid-template-columns: .75fr 1.25fr;
-    grid-template-rows: .82fr 1.35fr .82fr;
+    grid-template-rows: .82fr 1.35fr .82fr .74fr;
   }
 
   .project-mosaic.is-writer-active,
   .project-mosaic:has(.tile-writer:hover),
   .project-mosaic:has(.tile-writer:focus-visible) {
     grid-template-columns: 1.35fr .65fr;
-    grid-template-rows: .82fr .82fr 1.35fr;
+    grid-template-rows: .82fr .82fr 1.35fr .74fr;
   }
 
   .project-mosaic.is-comics-active,
   .project-mosaic:has(.tile-comics:hover),
   .project-mosaic:has(.tile-comics:focus-visible) {
     grid-template-columns: .65fr 1.35fr;
-    grid-template-rows: .82fr .82fr 1.35fr;
+    grid-template-rows: .82fr .82fr 1.35fr .74fr;
   }
 
   .project-mosaic.is-handout-active,
   .project-mosaic:has(.tile-handout:hover),
   .project-mosaic:has(.tile-handout:focus-visible) {
-    grid-template-columns: .65fr 1.35fr;
-    grid-template-rows: 1.35fr .82fr .82fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .82fr .82fr .82fr 1.24fr;
   }
 
   .tile-aed,
@@ -1094,8 +1075,8 @@ hr {
   .project-mosaic.is-writer-active .tile-handout,
   .project-mosaic.is-comics-active .tile-handout,
   .project-mosaic.is-handout-active .tile-handout {
-    grid-column: 2;
-    grid-row: 2;
+    grid-column: 1 / span 2;
+    grid-row: 4;
   }
 
   .grid-container {
@@ -1311,6 +1292,9 @@ hr {
   .mosaic-tile:focus-visible .tile-detail,
   .project-mosaic.is-active .mosaic-tile:not(.is-active-tile) .tile-detail {
     max-width: 36ch;
+    max-height: none;
+    margin-top: 12px;
+    -webkit-line-clamp: 5;
     opacity: 1;
     transform: none;
     transition: none;

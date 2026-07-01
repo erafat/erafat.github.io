@@ -298,8 +298,8 @@ nav span {
   position: relative;
   display: grid;
   grid-template-columns: 5fr 4fr 3fr;
-  grid-template-rows: 1fr 1fr;
-  height: clamp(420px, 46vw, 560px);
+  grid-template-rows: 1fr 1fr .74fr;
+  height: clamp(560px, 56vw, 700px);
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
@@ -310,57 +310,68 @@ nav span {
 
 .project-mosaic.is-aed-active {
   grid-template-columns: 7fr 3fr 2fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr .62fr;
 }
 
 .project-mosaic:has(.tile-aed:hover),
 .project-mosaic:has(.tile-aed:focus-visible) {
   grid-template-columns: 7fr 3fr 2fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr .62fr;
 }
 
 .project-mosaic.is-prompt-active {
   grid-template-columns: 3fr 5fr 4fr;
-  grid-template-rows: 1.35fr .65fr;
+  grid-template-rows: 1.35fr .65fr .62fr;
 }
 
 .project-mosaic:has(.tile-prompt:hover),
 .project-mosaic:has(.tile-prompt:focus-visible) {
   grid-template-columns: 3fr 5fr 4fr;
-  grid-template-rows: 1.35fr .65fr;
+  grid-template-rows: 1.35fr .65fr .62fr;
 }
 
 .project-mosaic.is-semantic-active {
   grid-template-columns: 3fr 4fr 5fr;
-  grid-template-rows: 1.35fr .65fr;
+  grid-template-rows: 1.35fr .65fr .62fr;
 }
 
 .project-mosaic:has(.tile-semantic:hover),
 .project-mosaic:has(.tile-semantic:focus-visible) {
   grid-template-columns: 3fr 4fr 5fr;
-  grid-template-rows: 1.35fr .65fr;
+  grid-template-rows: 1.35fr .65fr .62fr;
 }
 
 .project-mosaic.is-writer-active {
   grid-template-columns: 3fr 5fr 4fr;
-  grid-template-rows: .65fr 1.35fr;
+  grid-template-rows: .65fr 1.35fr .62fr;
 }
 
 .project-mosaic:has(.tile-writer:hover),
 .project-mosaic:has(.tile-writer:focus-visible) {
   grid-template-columns: 3fr 5fr 4fr;
-  grid-template-rows: .65fr 1.35fr;
+  grid-template-rows: .65fr 1.35fr .62fr;
 }
 
 .project-mosaic.is-comics-active {
   grid-template-columns: 3fr 4fr 5fr;
-  grid-template-rows: .62fr 1.38fr;
+  grid-template-rows: .62fr 1.38fr .62fr;
 }
 
 .project-mosaic:has(.tile-comics:hover),
 .project-mosaic:has(.tile-comics:focus-visible) {
   grid-template-columns: 3fr 4fr 5fr;
-  grid-template-rows: .62fr 1.38fr;
+  grid-template-rows: .62fr 1.38fr .62fr;
+}
+
+.project-mosaic.is-handout-active {
+  grid-template-columns: 3fr 4fr 5fr;
+  grid-template-rows: .76fr .76fr 1.18fr;
+}
+
+.project-mosaic:has(.tile-handout:hover),
+.project-mosaic:has(.tile-handout:focus-visible) {
+  grid-template-columns: 3fr 4fr 5fr;
+  grid-template-rows: .76fr .76fr 1.18fr;
 }
 
 .mosaic-tile {
@@ -457,6 +468,11 @@ nav span {
   grid-row: 2;
 }
 
+.tile-handout {
+  grid-column: 1 / span 3;
+  grid-row: 3;
+}
+
 .tile-comics::before {
   background:
     linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
@@ -485,7 +501,8 @@ nav span {
 .project-mosaic.is-prompt-active .tile-prompt,
 .project-mosaic.is-semantic-active .tile-semantic,
 .project-mosaic.is-writer-active .tile-writer,
-.project-mosaic.is-comics-active .tile-comics {
+.project-mosaic.is-comics-active .tile-comics,
+.project-mosaic.is-handout-active .tile-handout {
   grid-row: auto;
 }
 
@@ -505,6 +522,11 @@ nav span {
 .project-mosaic.is-comics-active .tile-comics {
   grid-column: 3;
   grid-row: 2;
+}
+
+.project-mosaic.is-handout-active .tile-handout {
+  grid-column: 1 / span 3;
+  grid-row: 3;
 }
 
 .project-mosaic.is-prompt-active .tile-comics {
@@ -588,7 +610,8 @@ nav span {
   letter-spacing: 0;
 }
 
-.tile-comics .tile-title {
+.tile-comics .tile-title,
+.tile-handout .tile-title {
   font-size: clamp(32px, 4vw, 54px);
 }
 
@@ -609,7 +632,10 @@ nav span {
 
 .tile-comics.is-active-tile .tile-title,
 .tile-comics:hover .tile-title,
-.tile-comics:focus-visible .tile-title {
+.tile-comics:focus-visible .tile-title,
+.tile-handout.is-active-tile .tile-title,
+.tile-handout:hover .tile-title,
+.tile-handout:focus-visible .tile-title {
   font-size: clamp(34px, 5vw, 68px);
 }
 
@@ -617,49 +643,6 @@ nav span {
 .tile-aed:hover .tile-detail,
 .tile-aed:focus-visible .tile-detail {
   max-width: 38ch;
-}
-
-.project-resources {
-  display: grid;
-  gap: 0;
-  margin-top: 14px;
-  border-top: 1px solid var(--line);
-}
-
-.project-resource-link {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  gap: 18px;
-  align-items: baseline;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--line);
-  transition: transform .22s ease;
-}
-
-.project-resource-link:hover,
-.project-resource-link:focus-visible {
-  transform: scale(.992);
-}
-
-.resource-kicker,
-.resource-meta {
-  color: var(--quiet);
-  font-family: var(--mono);
-  font-size: 12px;
-  line-height: 1.35;
-  text-transform: uppercase;
-}
-
-.resource-title {
-  min-width: 0;
-  color: color-mix(in srgb, var(--ink) 78%, transparent);
-  font-family: var(--mono);
-  font-size: 15px;
-  line-height: 1.4;
-}
-
-.resource-meta {
-  text-align: right;
 }
 
 h2 {
@@ -1003,43 +986,50 @@ hr {
 
   .project-mosaic {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    height: 780px;
+    grid-template-rows: 1fr 1fr 1fr .84fr;
+    height: 920px;
   }
 
   .project-mosaic.is-aed-active,
   .project-mosaic:has(.tile-aed:hover),
   .project-mosaic:has(.tile-aed:focus-visible) {
     grid-template-columns: 1.35fr .65fr;
-    grid-template-rows: 1fr 1fr .82fr;
+    grid-template-rows: 1fr 1fr .82fr .74fr;
   }
 
   .project-mosaic.is-prompt-active,
   .project-mosaic:has(.tile-prompt:hover),
   .project-mosaic:has(.tile-prompt:focus-visible) {
     grid-template-columns: .75fr 1.25fr;
-    grid-template-rows: 1.35fr .82fr .82fr;
+    grid-template-rows: 1.35fr .82fr .82fr .74fr;
   }
 
   .project-mosaic.is-semantic-active,
   .project-mosaic:has(.tile-semantic:hover),
   .project-mosaic:has(.tile-semantic:focus-visible) {
     grid-template-columns: .75fr 1.25fr;
-    grid-template-rows: .82fr 1.35fr .82fr;
+    grid-template-rows: .82fr 1.35fr .82fr .74fr;
   }
 
   .project-mosaic.is-writer-active,
   .project-mosaic:has(.tile-writer:hover),
   .project-mosaic:has(.tile-writer:focus-visible) {
     grid-template-columns: 1.35fr .65fr;
-    grid-template-rows: .82fr .82fr 1.35fr;
+    grid-template-rows: .82fr .82fr 1.35fr .74fr;
   }
 
   .project-mosaic.is-comics-active,
   .project-mosaic:has(.tile-comics:hover),
   .project-mosaic:has(.tile-comics:focus-visible) {
     grid-template-columns: .65fr 1.35fr;
-    grid-template-rows: .82fr .82fr 1.35fr;
+    grid-template-rows: .82fr .82fr 1.35fr .74fr;
+  }
+
+  .project-mosaic.is-handout-active,
+  .project-mosaic:has(.tile-handout:hover),
+  .project-mosaic:has(.tile-handout:focus-visible) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .82fr .82fr .82fr 1.24fr;
   }
 
   .tile-aed,
@@ -1047,7 +1037,8 @@ hr {
   .project-mosaic.is-prompt-active .tile-aed,
   .project-mosaic.is-semantic-active .tile-aed,
   .project-mosaic.is-writer-active .tile-aed,
-  .project-mosaic.is-comics-active .tile-aed {
+  .project-mosaic.is-comics-active .tile-aed,
+  .project-mosaic.is-handout-active .tile-aed {
     grid-column: 1;
     grid-row: 1 / span 2;
   }
@@ -1057,7 +1048,8 @@ hr {
   .project-mosaic.is-prompt-active .tile-prompt,
   .project-mosaic.is-semantic-active .tile-prompt,
   .project-mosaic.is-writer-active .tile-prompt,
-  .project-mosaic.is-comics-active .tile-prompt {
+  .project-mosaic.is-comics-active .tile-prompt,
+  .project-mosaic.is-handout-active .tile-prompt {
     grid-column: 2;
     grid-row: 1;
   }
@@ -1067,7 +1059,8 @@ hr {
   .project-mosaic.is-prompt-active .tile-semantic,
   .project-mosaic.is-semantic-active .tile-semantic,
   .project-mosaic.is-writer-active .tile-semantic,
-  .project-mosaic.is-comics-active .tile-semantic {
+  .project-mosaic.is-comics-active .tile-semantic,
+  .project-mosaic.is-handout-active .tile-semantic {
     grid-column: 2;
     grid-row: 2;
   }
@@ -1077,7 +1070,8 @@ hr {
   .project-mosaic.is-prompt-active .tile-comics,
   .project-mosaic.is-semantic-active .tile-comics,
   .project-mosaic.is-writer-active .tile-comics,
-  .project-mosaic.is-comics-active .tile-comics {
+  .project-mosaic.is-comics-active .tile-comics,
+  .project-mosaic.is-handout-active .tile-comics {
     grid-column: 2;
     grid-row: 3;
   }
@@ -1087,23 +1081,27 @@ hr {
   .project-mosaic.is-prompt-active .tile-writer,
   .project-mosaic.is-semantic-active .tile-writer,
   .project-mosaic.is-writer-active .tile-writer,
-  .project-mosaic.is-comics-active .tile-writer {
+  .project-mosaic.is-comics-active .tile-writer,
+  .project-mosaic.is-handout-active .tile-writer {
     grid-column: 1;
     grid-row: 3;
+  }
+
+  .tile-handout,
+  .project-mosaic.is-aed-active .tile-handout,
+  .project-mosaic.is-prompt-active .tile-handout,
+  .project-mosaic.is-semantic-active .tile-handout,
+  .project-mosaic.is-writer-active .tile-handout,
+  .project-mosaic.is-comics-active .tile-handout,
+  .project-mosaic.is-handout-active .tile-handout {
+    grid-column: 1 / span 2;
+    grid-row: 4;
   }
 
   .grid-container {
     grid-template-columns: 1fr;
   }
 
-  .project-resource-link {
-    grid-template-columns: 1fr auto;
-    gap: 6px 14px;
-  }
-
-  .resource-kicker {
-    grid-column: 1 / -1;
-  }
 }
 
 @media (max-width: 560px) {
@@ -1163,7 +1161,8 @@ hr {
   .tile-prompt,
   .tile-semantic,
   .tile-writer,
-  .tile-comics {
+  .tile-comics,
+  .tile-handout {
     grid-column: 1;
     grid-row: auto;
   }
@@ -1210,13 +1209,6 @@ hr {
     font-size: 12px;
   }
 
-  .project-resource-link {
-    grid-template-columns: 1fr;
-  }
-
-  .resource-meta {
-    text-align: left;
-  }
 }
 
 @media (max-width: 760px) {
@@ -1239,7 +1231,8 @@ hr {
   .project-mosaic.is-prompt-active,
   .project-mosaic.is-semantic-active,
   .project-mosaic.is-writer-active,
-  .project-mosaic.is-comics-active {
+  .project-mosaic.is-comics-active,
+  .project-mosaic.is-handout-active {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: none;
@@ -1253,6 +1246,7 @@ hr {
   .tile-semantic,
   .tile-writer,
   .tile-comics,
+  .tile-handout,
   .project-mosaic.is-prompt-active .tile-prompt,
   .project-mosaic.is-prompt-active .tile-comics,
   .project-mosaic.is-semantic-active .tile-semantic,
@@ -1262,7 +1256,8 @@ hr {
   .project-mosaic.is-comics-active .tile-prompt,
   .project-mosaic.is-comics-active .tile-semantic,
   .project-mosaic.is-comics-active .tile-writer,
-  .project-mosaic.is-comics-active .tile-comics {
+  .project-mosaic.is-comics-active .tile-comics,
+  .project-mosaic.is-handout-active .tile-handout {
     grid-column: 1;
     grid-row: auto;
   }
@@ -1334,7 +1329,12 @@ hr {
   .tile-comics.is-active-tile .tile-title,
   .tile-comics:hover .tile-title,
   .tile-comics:active .tile-title,
-  .tile-comics:focus-visible .tile-title {
+  .tile-comics:focus-visible .tile-title,
+  .tile-handout .tile-title,
+  .tile-handout.is-active-tile .tile-title,
+  .tile-handout:hover .tile-title,
+  .tile-handout:active .tile-title,
+  .tile-handout:focus-visible .tile-title {
     max-width: 14ch;
     font-size: clamp(36px, 12vw, 58px);
     transform: none;

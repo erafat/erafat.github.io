@@ -17,7 +17,8 @@
     "tile-prompt": "is-prompt-active",
     "tile-semantic": "is-semantic-active",
     "tile-writer": "is-writer-active",
-    "tile-comics": "is-comics-active"
+    "tile-comics": "is-comics-active",
+    "tile-handout": "is-handout-active"
   };
 
   function clearProjectState() {

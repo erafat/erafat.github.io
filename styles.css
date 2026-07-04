@@ -535,7 +535,7 @@ nav span {
   gap: clamp(6px, 1vw, 10px);
   min-width: 0;
   overflow: hidden;
-  transform: translateY(var(--tile-copy-y, clamp(42px, 6vw, 72px)));
+  transform: translateY(var(--tile-copy-y, 0px));
   transition: transform .42s cubic-bezier(.22, 1, .36, 1), opacity .28s ease;
 }
 
@@ -574,17 +574,17 @@ nav span {
 
 .tile-detail {
   max-width: 34ch;
-  max-height: 0;
-  margin-top: 0;
-  font-size: 13px;
-  line-height: 1.45;
-  opacity: 0;
+  max-height: 8.8em;
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 1.42;
+  opacity: 1;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: var(--tile-detail-lines, 4);
+  -webkit-line-clamp: var(--tile-detail-lines, 3);
   overflow: hidden;
   overflow-wrap: anywhere;
-  transform: translateY(10px);
+  transform: translateY(0);
   transition: max-height .28s ease, margin-top .28s ease, opacity .28s ease, transform .28s ease;
 }
 
@@ -597,7 +597,7 @@ nav span {
 }
 
 .project-mosaic.is-active .mosaic-tile:not(.is-active-tile) .tile-detail {
-  opacity: 0;
+  opacity: 1;
 }
 
 .mosaic-tile.is-active-tile .tile-detail,

@@ -297,7 +297,7 @@ nav span {
 .project-mosaic {
   position: relative;
   display: grid;
-  grid-template-columns: 5fr 3fr 3fr 3fr;
+  grid-template-columns: 5fr 3fr 3fr 3fr 3fr;
   grid-template-rows: 1fr 1fr;
   height: clamp(420px, 46vw, 560px);
   border: 1px solid var(--line);
@@ -309,69 +309,80 @@ nav span {
 }
 
 .project-mosaic.is-aed-active {
-  grid-template-columns: 7fr 2.5fr 2.5fr 2.5fr;
+  grid-template-columns: 7fr 2.5fr 2.5fr 2.5fr 2.5fr;
   grid-template-rows: 1fr 1fr;
 }
 
 .project-mosaic:has(.tile-aed:hover),
 .project-mosaic:has(.tile-aed:focus-visible) {
-  grid-template-columns: 7fr 2.5fr 2.5fr 2.5fr;
+  grid-template-columns: 7fr 2.5fr 2.5fr 2.5fr 2.5fr;
   grid-template-rows: 1fr 1fr;
 }
 
 .project-mosaic.is-prompt-active {
-  grid-template-columns: 3fr 5fr 3fr 3fr;
+  grid-template-columns: 3fr 5fr 3fr 3fr 3fr;
   grid-template-rows: 1.35fr .65fr;
 }
 
 .project-mosaic:has(.tile-prompt:hover),
 .project-mosaic:has(.tile-prompt:focus-visible) {
-  grid-template-columns: 3fr 5fr 3fr 3fr;
+  grid-template-columns: 3fr 5fr 3fr 3fr 3fr;
   grid-template-rows: 1.35fr .65fr;
 }
 
 .project-mosaic.is-semantic-active {
-  grid-template-columns: 3fr 3fr 5fr 3fr;
+  grid-template-columns: 3fr 3fr 5fr 3fr 3fr;
   grid-template-rows: 1.35fr .65fr;
 }
 
 .project-mosaic:has(.tile-semantic:hover),
 .project-mosaic:has(.tile-semantic:focus-visible) {
-  grid-template-columns: 3fr 3fr 5fr 3fr;
+  grid-template-columns: 3fr 3fr 5fr 3fr 3fr;
   grid-template-rows: 1.35fr .65fr;
 }
 
 .project-mosaic.is-writer-active {
-  grid-template-columns: 3fr 4fr 4fr 3fr;
+  grid-template-columns: 3fr 4fr 4fr 3fr 3fr;
   grid-template-rows: .65fr 1.35fr;
 }
 
 .project-mosaic:has(.tile-writer:hover),
 .project-mosaic:has(.tile-writer:focus-visible) {
-  grid-template-columns: 3fr 4fr 4fr 3fr;
+  grid-template-columns: 3fr 4fr 4fr 3fr 3fr;
   grid-template-rows: .65fr 1.35fr;
 }
 
 .project-mosaic.is-comics-active {
-  grid-template-columns: 3fr 3fr 3fr 5fr;
+  grid-template-columns: 3fr 3fr 3fr 5fr 3fr;
   grid-template-rows: .65fr 1.35fr;
 }
 
 .project-mosaic:has(.tile-comics:hover),
 .project-mosaic:has(.tile-comics:focus-visible) {
-  grid-template-columns: 3fr 3fr 3fr 5fr;
+  grid-template-columns: 3fr 3fr 3fr 5fr 3fr;
   grid-template-rows: .65fr 1.35fr;
 }
 
 .project-mosaic.is-handout-active {
-  grid-template-columns: 3fr 3fr 3fr 5fr;
+  grid-template-columns: 3fr 3fr 3fr 5fr 3fr;
   grid-template-rows: 1.35fr .65fr;
 }
 
 .project-mosaic:has(.tile-handout:hover),
 .project-mosaic:has(.tile-handout:focus-visible) {
-  grid-template-columns: 3fr 3fr 3fr 5fr;
+  grid-template-columns: 3fr 3fr 3fr 5fr 3fr;
   grid-template-rows: 1.35fr .65fr;
+}
+
+.project-mosaic.is-prep-kit-active {
+  grid-template-columns: 3fr 3fr 3fr 3fr 5fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.project-mosaic:has(.tile-prep-kit:hover),
+.project-mosaic:has(.tile-prep-kit:focus-visible) {
+  grid-template-columns: 3fr 3fr 3fr 3fr 5fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .mosaic-tile {
@@ -465,11 +476,17 @@ nav span {
   grid-row: 1;
 }
 
+.tile-prep-kit {
+  grid-column: 5;
+  grid-row: 1 / span 2;
+}
+
 .project-mosaic.is-prompt-active .tile-prompt,
 .project-mosaic.is-semantic-active .tile-semantic,
 .project-mosaic.is-writer-active .tile-writer,
 .project-mosaic.is-comics-active .tile-comics,
-.project-mosaic.is-handout-active .tile-handout {
+.project-mosaic.is-handout-active .tile-handout,
+.project-mosaic.is-prep-kit-active .tile-prep-kit {
   grid-row: auto;
 }
 
@@ -494,6 +511,11 @@ nav span {
 .project-mosaic.is-handout-active .tile-handout {
   grid-column: 4;
   grid-row: 1;
+}
+
+.project-mosaic.is-prep-kit-active .tile-prep-kit {
+  grid-column: 5;
+  grid-row: 1 / span 2;
 }
 
 .project-mosaic.is-prompt-active .tile-comics {
@@ -592,7 +614,8 @@ nav span {
 }
 
 .tile-comics .tile-title,
-.tile-handout .tile-title {
+.tile-handout .tile-title,
+.tile-prep-kit .tile-title {
   font-size: var(--tile-title-size, clamp(26px, 3.4vw, 44px));
 }
 
@@ -616,7 +639,10 @@ nav span {
 .tile-comics:focus-visible .tile-title,
 .tile-handout.is-active-tile .tile-title,
 .tile-handout:hover .tile-title,
-.tile-handout:focus-visible .tile-title {
+.tile-handout:focus-visible .tile-title,
+.tile-prep-kit.is-active-tile .tile-title,
+.tile-prep-kit:hover .tile-title,
+.tile-prep-kit:focus-visible .tile-title {
   font-size: clamp(34px, 5vw, 68px);
 }
 
@@ -1013,6 +1039,13 @@ hr {
     grid-template-rows: .82fr .82fr .82fr 1.24fr;
   }
 
+  .project-mosaic.is-prep-kit-active,
+  .project-mosaic:has(.tile-prep-kit:hover),
+  .project-mosaic:has(.tile-prep-kit:focus-visible) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .82fr .82fr .82fr 1.24fr;
+  }
+
   .tile-aed,
   .project-mosaic.is-aed-active .tile-aed,
   .project-mosaic.is-prompt-active .tile-aed,
@@ -1075,7 +1108,19 @@ hr {
   .project-mosaic.is-writer-active .tile-handout,
   .project-mosaic.is-comics-active .tile-handout,
   .project-mosaic.is-handout-active .tile-handout {
-    grid-column: 1 / span 2;
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .tile-prep-kit,
+  .project-mosaic.is-aed-active .tile-prep-kit,
+  .project-mosaic.is-prompt-active .tile-prep-kit,
+  .project-mosaic.is-semantic-active .tile-prep-kit,
+  .project-mosaic.is-writer-active .tile-prep-kit,
+  .project-mosaic.is-comics-active .tile-prep-kit,
+  .project-mosaic.is-handout-active .tile-prep-kit,
+  .project-mosaic.is-prep-kit-active .tile-prep-kit {
+    grid-column: 2;
     grid-row: 4;
   }
 
@@ -1143,7 +1188,8 @@ hr {
   .tile-semantic,
   .tile-writer,
   .tile-comics,
-  .tile-handout {
+  .tile-handout,
+  .tile-prep-kit {
     grid-column: 1;
     grid-row: auto;
   }
@@ -1213,7 +1259,8 @@ hr {
   .project-mosaic.is-semantic-active,
   .project-mosaic.is-writer-active,
   .project-mosaic.is-comics-active,
-  .project-mosaic.is-handout-active {
+  .project-mosaic.is-handout-active,
+  .project-mosaic.is-prep-kit-active {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: none;
@@ -1228,6 +1275,7 @@ hr {
   .tile-writer,
   .tile-comics,
   .tile-handout,
+  .tile-prep-kit,
   .project-mosaic.is-prompt-active .tile-prompt,
   .project-mosaic.is-prompt-active .tile-comics,
   .project-mosaic.is-semantic-active .tile-semantic,
@@ -1238,7 +1286,8 @@ hr {
   .project-mosaic.is-comics-active .tile-semantic,
   .project-mosaic.is-comics-active .tile-writer,
   .project-mosaic.is-comics-active .tile-comics,
-  .project-mosaic.is-handout-active .tile-handout {
+  .project-mosaic.is-handout-active .tile-handout,
+  .project-mosaic.is-prep-kit-active .tile-prep-kit {
     grid-column: 1;
     grid-row: auto;
   }
@@ -1318,7 +1367,12 @@ hr {
   .tile-handout.is-active-tile .tile-title,
   .tile-handout:hover .tile-title,
   .tile-handout:active .tile-title,
-  .tile-handout:focus-visible .tile-title {
+  .tile-handout:focus-visible .tile-title,
+  .tile-prep-kit .tile-title,
+  .tile-prep-kit.is-active-tile .tile-title,
+  .tile-prep-kit:hover .tile-title,
+  .tile-prep-kit:active .tile-title,
+  .tile-prep-kit:focus-visible .tile-title {
     max-width: 14ch;
     font-size: clamp(36px, 12vw, 58px);
     transform: none;

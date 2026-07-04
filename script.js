@@ -19,7 +19,8 @@
     "tile-semantic": "is-semantic-active",
     "tile-writer": "is-writer-active",
     "tile-comics": "is-comics-active",
-    "tile-handout": "is-handout-active"
+    "tile-handout": "is-handout-active",
+    "tile-prep-kit": "is-prep-kit-active"
   };
 
   function clearProjectState() {
